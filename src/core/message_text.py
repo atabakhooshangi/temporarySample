@@ -1,0 +1,111 @@
+from django.utils.translation import gettext_lazy as _
+
+
+class MessageText:
+    # ALl 400 ERROR CATEGORY
+    ZibalPaymentGatewayError400 = _('Zibal gateway error')
+    ExPayPaymentGatewayError400 = _('ExPay gateway error')
+    ServiceSubscriptionFailed400 = _('Service subscription failed exception')
+    AlreadySubscribed400 = _('already subscribed!')
+    ServiceIsFree400 = _('This service is free.')
+    TrialNotAvailable400 = _('Trial is not available for this service')
+    VolumeIsRequired400 = _('volume filed is required.')
+    TakeProfile2ISEqualTakeProfit1400 = _('take profit 2 is equal take profit 1.')
+    TakeProfile2ISLessThanTakeProfit1400 = _('take profit 2 is less than take profit 1.')
+    EitherOneOfPOForVirtualValueRequired400 = _('Either one of Percentage of fund or virtual value needs to be given')
+    TakeProfile2ISBiggerThanTakeProfit1400 = _('take profit 2 is bigger than take profit 1.')
+    AlreadyUsedTrialSubscription400 = _('already used the trial subscription option')
+    ServiceIsNotSupportTrial400 = _('This service is not support trial.')
+    UseTrialLimit400 = _('It\'s not possible used trial more than limitation.')
+    UseServiceTrialOnce400 = _('You have used this service trial option once.')
+    LeverageNotModify400 = _('leverage not modified')
+    PriceIsInvalid400 = _("price is invalid")
+    AccountingWalletBalanceIsNotEnough400 = _('Wallet balance is not enough')
+    InvalidLength400 = _('Invalid length for this field(Must be between 4 and 20)')
+    UnacceptableCharacters400 = _(
+        'Chosen characters are not valid for this field(Valid characters are english letters, digits, underline and dot)')
+    UniqueConstraint400 = _('This value already exists, please choose another one')
+    ThisOrderIsNotCloseable = _('This order is not closeable.')
+    ThisOrderIsNotCancel = _('Canceling this order is not possible.')
+    ApiKeyExist = _('This apiKey is defined.')
+    ApiKeyDefaultImpossible400 = _('Change default apiKey impossible.')
+    ApiKeyNotSet400 = _('Api key is not set.')
+    InvalidLeverage = _('buy leverage invalid')
+    InvalidStopLosValue = _('Stop los value is not acceptable by exchange.')
+    ImpermissibleOrderPrice = _('order price ir out of permissible range.')
+    InsufficientMargin400 = _('Insufficient margin')
+    BingxInvalidPrecision400 = _('Invalid Precision')
+    BingxInvalidTP400 = _('TP Price must be greater than Order Price')
+    AmountValueNotAcceptable = _('Amount value is less than acceptable exchange value.')
+    OrderIsNotEditable = _('Order is not edible because it is closed or canceled.')
+
+    # 403 ERRORS
+    LevelOneAuthenticationRequired403 = _('Level one authentication required for this action!')
+    LevelTwoAuthenticationRequired403 = _('Level two authentication required for this action!')
+    NotEnoughVirtualBalance = _('Not Enough Virtual Balance')
+    NotAllowedToChangeVirtualValue = _('Not allowed to change virtual value if the signal is started,closed or deleted!')
+
+    # 404 ERRORS
+    TradingSignalIsNotFound404 = _('Signal with id is not found.')
+    ServiceIsNotFound404 = _('Service with id is not found.')
+    UserProfileIsNotFound404 = _('user profile is not found.')
+    ServicesNotFound404 = _('profile\'s service is not found.')
+    SettingDataNotFond404 = _('Setting data is not found.')
+    CampaignNotFond404 = _('Campaign not found.')
+    OrderIsNotExist404 = _('This order is closed or so late.')
+    OrderOFPositionIsNotExist404 = _('There are no orders for this position.')
+
+    # 406 ERRORS
+    RequiredField406 = _('Required field is not filled.')
+    UndeletableSignal406 = _('you can\'t close this signal')
+    UserISNotVendor406 = _('This user is not vendor.')
+    TakeProfit1ValueNotAcceptable406 = _('take profile 1 value not acceptable.')
+    StopLosValueNotAcceptable406 = _('stop los value not acceptable.')
+    CanNotPendingApplyOnThisService406 = _('can not apply pending on this service')
+    ThisValueIsNotEditable = _('can not edit this value.')
+    InsufficientFunds406 = _('Not enough sufficient')
+    ExchangeError406 = _('Exchange error for creation order')
+    NotSupportSpotSignal = _('This feature not support the spot signal currently.')
+    NotSupportThisSignal = _(
+        'This feature not support this signal because on of this reason: it is start, closed or has a edited version.')
+    NotSupportThisExchagePairCoin = _('Coin is not currently available.')
+    SignalIsCopiedOnce = _('Can\'t copy a signal more than one.')
+    PositionHasBeenClosed = _('Position has been closed.')
+    NoHistoryFound = _('No trading history found!')
+    LeverageUnacceptable = _('Ensure this value is greater than or equal to 1.')
+
+    # 409 ERROR
+    UserProfileIsExists = _('User profile is exist.')
+
+    # 500 ERRORS
+    AccountingSocialTransactionSubmissionFailed500 = _('failed to submit social transaction in accounting')
+    AccountingWalletBalanceDecrementFailed500 = _('failed to decrease wallet balance in accounting')
+    NetworkError500 = _('network error')
+    AuthenticationError500 = _('Your api key or secret key has problem.')
+    OrderNotFound500 = _('This order id is not found.(It\'s closed or it may be in a position.')
+
+    # invitation code errors
+    InvitationCodeIsExpired400 = _('Invitation code is expired.')
+    WrongCodeForThisService400 = _('Wrong code for this service.')
+    InvitationIsNotStarted400 = _('Invitation is not started yet.')
+    InvitationCodeDoesNotExist400 = _('Invitation code does not exist.')
+    TakeProfitIsTooHigh400 = _("Take profit: (%s) is too high")
+    StopLossIsTooHigh400 = _("Stop loss: (%s) is too high")
+    StopLossBuyShouldBeLowerThan = _("Stop loss (%s) for Buy position should be lower than (%s)")
+    StopLossSellShouldBeGreaterThan = _("Stop loss (%s) for Sell position should be greater (%s)")
+    TakeProfitBuyShouldBeGreaterThan = _("Take profit (%s) for Buy position should be higher than (%s)")
+    TakeProfitSellShouldBeLowerThan = _("Take profit (%s) for Sell position should be lower than (%s)")
+    StopLossLessThanTenPercent = _("Stop loss: (%s) should be greater than 10 percent of entry point")
+    TakeProfitLessThanTenPercent = _("Take profit: (%s) should be greater than 10 percent of entry point")
+    ByBitNotHaveSymbol = _("bybit does not have market symbol (%s)")
+    # Bingx Errors
+    BingXNotHaveSymbol = _("bingx does not have market symbol (%s)")
+    TakeProfitMustBeHigher = _("TakeProfitPrice(%s) must be higher than entrustPrice(%s)")
+    TakeProfitMustBeLower = _("TakeProfitPrice(%s) must be lower than entrustPrice(%s)")
+    StopLossMustBeLower = _("StopLossPrice(%s) price must lower than fair price(%s)")
+    StopLossMustBeGreater = _("StopLossPrice(%s) price must greater than fair price(%s)")
+    BingXLeverageIsInvalid = _("Leverage is invalid")
+    CheckLimitPriceMinPrice = _("checkPriceLimit entrustPrice must greater than minPrice")
+    CheckLimitPriceMaxPrice = _("checkPriceLimit entrustPrice must less than maxPrice")
+    OrderAlreadyFilled = _("order is already filled")
+    # End of Bingx Errors

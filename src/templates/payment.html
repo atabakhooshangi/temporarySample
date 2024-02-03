@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://box.amnmoj.ir/email-files/style.css"/>
+    <title>Exwino</title>
+    <style media="all" type="text/css">
+        body,
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        small,
+        button,
+        span,
+        table,
+        tr,
+        td {
+            font-family: Anjoman, 'iranyekan', B Yekan, tahoma, 'Open Sans', Arial, Helvetica, sans-serif !important;
+            color: #fff;
+        }
+
+        .btn-outlined {
+            background-color: transparent;
+            border: 1px solid #7e94ff;
+            border-radius: 8px;
+            color: #7e94ff;
+            padding: 12px;
+            font-size: 16px;
+            margin-left: 10px;
+            flex-grow: 1;
+            text-decoration: none;
+        }
+
+        .btn-contained {
+            background-color: #7e94ff;
+            border: 1px solid #7e94ff;
+            border-radius: 8px;
+            color: #fff;
+            padding: 12px 0;
+            font-size: 16px;
+            text-decoration: none;
+            width: 100%;
+            display: block;
+        }
+
+        .parent {
+            min-width: 30%;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .d-block {
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            .parent {
+                min-width: 60%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .parent {
+                min-width: 80%;
+            }
+        }
+
+        @media (min-width: 567px) {
+            .d-sm-flex {
+                display: flex;
+            }
+
+            .d-block {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body style="width: 100%;overflow-x:hidden;background-color: #0a1930;">
+<div style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;min-height: 100vh;">
+    <div class="parent" style="text-align: center;margin: 0 10px;">
+
+        {% if payment_successful %}
+        <p style="text-align: center">تراکنش موفق</p>
+        <div style="background-color: #172b46;padding: 20px;border-radius: 12px">
+            <div style="padding-top: 40px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <g id="check_circle-24px_1_" data-name="check_circle-24px (1)"
+                       transform="translate(1.051 1.101)">
+                        <circle id="Ellipse_891" data-name="Ellipse 891" cx="24" cy="24" r="24"
+                                transform="translate(-1.051 -1.101)" fill="#4ad295" opacity="0.7"/>
+                        <circle id="Ellipse_257" data-name="Ellipse 257" cx="17.057" cy="17.057" r="17.057"
+                                transform="translate(5.893 5.843)" fill="#fff"/>
+                        <path id="Path_797" data-name="Path 797" d="M0,0H45.9V45.9H0Z" fill="none"/>
+                        <path id="Path_798" data-name="Path 798"
+                              d="M21.739,2A19.739,19.739,0,1,0,41.478,21.739,19.746,19.746,0,0,0,21.739,2ZM16.39,30.207,9.3,23.121a1.968,1.968,0,1,1,2.783-2.783l5.7,5.685,13.58-13.58a1.968,1.968,0,0,1,2.783,2.783L19.173,30.207a1.966,1.966,0,0,1-2.783,0Z"
+                              transform="translate(1.211 1.211)" fill="#4ad295"/>
+                    </g>
+                </svg>
+            </div>
+
+            <p style="padding-bottom: 20px">واریز تومانی با موفقیت انجام شد</p>
+
+            {% else %}
+            <p style="text-align: center">تراکنش ناموفق</p>
+            <div style="background-color: #172b46;padding: 20px;border-radius: 12px">
+                <div style="padding-top: 40px">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                        <g id="failed" transform="translate(1.051 1.101)">
+                            <circle id="Ellipse_891" data-name="Ellipse 891" cx="24" cy="24" r="24"
+                                    transform="translate(-1.051 -1.101)" fill="#ff5e73" opacity="0.7"/>
+                            <circle id="Ellipse_257" data-name="Ellipse 257" cx="17.057" cy="17.057" r="17.057"
+                                    transform="translate(5.893 5.843)" fill="#fff"/>
+                            <path id="Path_797" data-name="Path 797" d="M0,0H45.9V45.9H0Z" fill="none"/>
+                            <path id="Subtraction_94" data-name="Subtraction 94"
+                                  d="M7946.951,12224.9a20,20,0,1,1,14.141-5.857A19.868,19.868,0,0,1,7946.951,12224.9Zm.021-17.383h0l7.129,7.13a1.834,1.834,0,1,0,2.6-2.593l-7.133-7.133,7.133-7.131a1.835,1.835,0,0,0-2.6-2.595l-7.13,7.133-7.133-7.133a1.834,1.834,0,1,0-2.592,2.595l7.13,7.131-7.13,7.133a1.833,1.833,0,1,0,2.592,2.593l7.133-7.13Z"
+                                  transform="translate(-7924 -12181.948)" fill="#ff5e73"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <p style="padding-bottom: 20px">واریز تومانی با خطا مواجه شد</p>
+                {% endif %}
+
+                <div class="d-none d-sm-flex" style="justify-content: center">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>مبلغ واریزی:</td>
+                            <td style="padding-right: 10px;text-align: right">
+                                        <span>
+                                            <span>{{ amount }}</span>
+                                            <span style="color: #939daa;font-size: 14px">تومان</span>
+                                        </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 20px;">شماره پیگیری:</td>
+                            <td style="padding-top: 20px;padding-right: 10px;text-align: right">{{ reference_id }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-block d-sm-none" style="justify-content: center">
+                    <p>مبلغ واریزی:</p>
+                    <p>{{ amount }}</p>
+                    <p>شماره پیگیری:</p>
+                    <p>{{ reference_id }}</p>
+                </div>
+                <div style="margin: 30px 0;padding-top: 20px">
+                    <a target="_self" href="{{ client_redirect_url }}" class="btn-contained">بازگشت به اکسوینو</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

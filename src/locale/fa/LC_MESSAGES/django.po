@@ -1,0 +1,444 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-06 10:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: copytrading/exceptions.py:83
+msgid "Insufficient margin"
+msgstr "مقدار مارجین ناکافی است"
+
+
+#: copytrading/exceptions.py:83
+msgid "Invalid Precision"
+msgstr "مقدار اعشار کوین اشتباه است"
+
+#: copytrading/exceptions.py:83
+msgid "TP Price must be greater than Order Price"
+msgstr "مقدار ورودی TP/SL اشتباه است!"
+
+#: core/message_text.py:6
+msgid "Zibal gateway error"
+msgstr "اشکال در برقراری ارتباط با درگاه پرداخت!"
+
+#: core/message_text.py:7
+msgid "ExPay gateway error"
+msgstr "اشکال در برقراری ارتباط با درگاه پرداخت!"
+
+#: core/message_text.py:8
+msgid "Service subscription failed exception"
+msgstr "خرید اشتراک با مشکل روبه رو شده است."
+
+#: core/message_text.py:9
+msgid "already subscribed!"
+msgstr "این سرویس قبلا خریداری شده است!"
+
+#: core/message_text.py:10
+msgid "This service is free."
+msgstr "ابن سرویس رایگان است."
+
+#: core/message_text.py:11
+msgid "Trial is not available for this service"
+msgstr "اشتراک ازمایشی برای این کانال ارایه داده نمیشود"
+
+#: core/message_text.py:12
+msgid "volume filed is required."
+msgstr "فیلد حجم مشخص نشده است."
+
+#: core/message_text.py:13
+msgid "take profit 2 is equal take profit 1."
+msgstr "مقدار برداشت سود 2 نمیتواند با برداشت سود 1 برابر باشد."
+
+#: core/message_text.py:14
+msgid "take profit 2 is less than take profit 1."
+msgstr "مقدار برداشت سود 2 نمیتواند کمتر از مقدار برداشت سود 1 باشد!"
+
+#: core/message_text.py:15
+msgid "take profit 2 is bigger than take profit 1."
+msgstr "مقدار برداشت سود 2 نمیتواند بزرگتر از مقدار برداشت سود 1 باشد!"
+
+#: core/message_text.py:16
+msgid "already used the trial subscription option"
+msgstr "قبلا از گزینه اشتراک ازمایشی استفاده شده است"
+
+#: core/message_text.py:17
+msgid "This service is not support trial."
+msgstr "این کانال اشتراک ازمایشی ندارد"
+
+#: core/message_text.py:18
+msgid "It's not possible used trial more than limitation."
+msgstr "بیش از یکبار نمیتوانید از قابلیت ترایال استفاده کنید"
+
+#: core/message_text.py:19
+msgid "You have used this service trial option once."
+msgstr "شما قبلا از گزینه اشتراک ازمایشی استفاده کرده اید"
+
+#: core/message_text.py:20
+msgid "leverage not modified"
+msgstr "تغییر در مقدار اهرم ایجاد نشد."
+
+#: core/message_text.py:21
+msgid "Wallet balance is not enough"
+msgstr "موجودی کیف پول شما کافی نیست."
+
+#: core/message_text.py:22
+msgid "Invalid length for this field(Must be between 4 and 20)"
+msgstr "تعداد کارکتر های ورودی نامعتبر است(حداقل ۴ و حداکثر ۲۰)"
+
+#: core/message_text.py:24
+msgid ""
+"Chosen characters are not valid for this field(Valid characters are english "
+"letters, digits, underline and dot)"
+msgstr "فقط شامل حروف انگلیسی  a تا z و اعداد  0 تا 9  و ـ و . می تواند باشد "
+
+#: core/message_text.py:25
+msgid "This value already exists, please choose another one"
+msgstr "این مقدار قبلا ثبت شده است لطفا یک مقدار دیگر وارد کنید"
+
+#: core/message_text.py:26
+msgid "This order is not closeable."
+msgstr "امکان لغو این سفارش وجود ندارد."
+
+#: core/message_text.py:27
+msgid "Canceling this order is not possible."
+msgstr "امکان لغو این سفارش به دلیل باز شدن آن وجود ندارد."
+
+#: core/message_text.py:28
+msgid "This apiKey is defined."
+msgstr "این API قبلا در سیستم ثبت شده است."
+
+#: core/message_text.py:29
+msgid "Change default apiKey impossible."
+msgstr "امکان تغییر دیفالت apikey وجود ندارد."
+
+#: core/message_text.py:30
+msgid "Api key is not set."
+msgstr "api key تعریف نشده است"
+
+#: core/message_text.py:31
+msgid "buy leverage invalid"
+msgstr "مقدار اهرم غیر قابل قبول است."
+
+#: core/message_text.py:32
+msgid "Stop los value is not acceptable by exchange."
+msgstr "مقدار توقف ضرر قابل قبول نیست!"
+
+#: core/message_text.py:33
+msgid "order price ir out of permissible range."
+msgstr "قیمت سفارش خارج از رنج قابل قبول صرافی است."
+
+#: core/message_text.py:34
+msgid "Amount value is less than acceptable exchange value."
+msgstr "مقدار ورودی مشخص شده از حد مجاز صرافی مورد نظر شما کمتر است."
+
+#: core/message_text.py:40
+msgid "Level one authentication required for this action!"
+msgstr "احراز هویت سطح یک برای این عملیات ضروری است."
+
+#: core/message_text.py:41
+msgid "Level two authentication required for this action!"
+msgstr "احراز هویت سطح دو برای این عملیات ضروری است."
+
+#: core/message_text.py:42
+msgid "Not Enough Virtual Balance"
+msgstr ""
+
+#: core/message_text.py:43
+msgid ""
+"Not allowed to change virtual value if the signal is started,closed or "
+"deleted!"
+msgstr "موجودی مجازی سیگنال پس از شروع و یا پاک شدن غیر قابل تغییر است!"
+
+#: core/message_text.py:46
+msgid "Signal with id is not found."
+msgstr "سیگنال یافت نشد!"
+
+#: core/message_text.py:47
+msgid "Service with id is not found."
+msgstr "سرویس یافت نشد!"
+
+#: core/message_text.py:48
+msgid "user profile is not found."
+msgstr "پروفایل یافت نشد!"
+
+#: core/message_text.py:49
+msgid "profile's service is not found."
+msgstr "سرویس این پروفایل یافت نشد!"
+
+#: core/message_text.py:50
+msgid "Setting data is not found."
+msgstr "دیتای تنظیمات یافت نشد"
+
+#: core/message_text.py:51
+msgid "Campaign not found."
+msgstr ""
+
+#: core/message_text.py:52
+msgid "This order is closed or so late."
+msgstr "این سفارش بسته شده است."
+
+#: core/message_text.py:55
+msgid "Required field is not filled."
+msgstr "فیلدهای ضروری پر نشده است!"
+
+#: core/message_text.py:56
+msgid "you can't close this signal"
+msgstr "امکان بستن این سیگنال وجود ندارد!"
+
+#: core/message_text.py:57
+msgid "This user is not vendor."
+msgstr "این کاربر تریدر نیست."
+
+#: core/message_text.py:58
+msgid "take profile 1 value not acceptable."
+msgstr "مقدار برداشت سود 1 قابل قبول نیست."
+
+#: core/message_text.py:59
+msgid "stop los value not acceptable."
+msgstr "مقدار توقف ضرر قابل قبول نیست!"
+
+#: core/message_text.py:60
+msgid "can not apply pending on this service"
+msgstr "این کانال را نمیتوان در وضعیت انتظار قرار داد"
+
+#: core/message_text.py:61
+msgid "can not edit this value."
+msgstr "این مقدار قابل ادیت نیست."
+
+#: core/message_text.py:62
+msgid "Not enough sufficient"
+msgstr "موجودی شما کافی نمی باشد."
+
+#: core/message_text.py:63
+msgid "Exchange error for creation order"
+msgstr "خطا در صرافی"
+
+#: core/message_text.py:64
+msgid "This feature not support the spot signal currently."
+msgstr "امکان کپی سیگنال های اسپات در حال حاضر وجود ندارد."
+
+#: core/message_text.py:66
+msgid ""
+"This feature not support this signal because on of this reason: it is start, "
+"closed or has a edited version."
+msgstr ""
+"امکان انجام عملیات روی این سیگنال ممکن نیست.(تا قبل از شروع سیگنال امکان "
+"انجام این عملیات میسر است)"
+
+#: core/message_text.py:67
+msgid "Coin is not currently available."
+msgstr "این کوین درحال حاضر در دسترس نمیباشد"
+
+#: core/message_text.py:68
+msgid "Can't copy a signal more than one."
+msgstr "یک سیگنال را بیش از یکبار نمیتوان کپی کرد"
+
+#: core/message_text.py:69
+msgid "Position has been closed."
+msgstr "این پوزیشن بسته شده است."
+
+#: core/message_text.py:70 signals/tests/test_create_signal.py:347
+msgid "Ensure this value is greater than or equal to 1."
+msgstr "این مقدار نمیتواند کمتر از یک باشد."
+
+#: core/message_text.py:73
+msgid "User profile is exist."
+msgstr "پروفایل یافت نشد!"
+
+#: core/message_text.py:76
+msgid "failed to submit social transaction in accounting"
+msgstr ""
+
+#: core/message_text.py:77
+msgid "failed to decrease wallet balance in accounting"
+msgstr ""
+
+#: core/message_text.py:78
+msgid "network error"
+msgstr "اختلال در شبکه"
+
+#: core/message_text.py:79
+msgid "Your api key or secret key has problem."
+msgstr "اطلاعات وارد شده برای api key نامعتبر است."
+
+#: core/message_text.py:80
+msgid "This order id is not found.(It's closed or it may be in a position."
+msgstr "این سفارش باز شده است و امکان لغو آن نیست."
+
+#: core/message_text.py:83
+msgid "Invitation code is expired."
+msgstr "کد دعوت منقضی شده است"
+
+#: core/message_text.py:84
+msgid "Wrong code for this service."
+msgstr "این کد تخفیف برای این تریدر قابل استفاده نیست."
+
+#: core/message_text.py:85
+msgid "Invitation is not started yet."
+msgstr "بازه ی زمانی قابل استفاده ی این کد هنوز شروع نشده است."
+
+#: core/message_text.py:86
+msgid "Invitation code does not exist."
+msgstr "کد تخفیف وجود ندارد."
+
+#: core/settings.py:184
+msgid "Persian"
+msgstr "فارسی"
+
+#: core/settings.py:185
+msgid "English"
+msgstr "انگلیسی"
+
+#: services/admin/subscription.py:14
+msgid "published services"
+msgstr ""
+
+msgid "Ensure this value is greater than or equal to 0."
+msgstr "مقدار معتبر برای این فیلد بزرگتر یا مساوی با صفر است"
+
+#: venv/lib/python3.10/site-packages/click/exceptions.py:261
+msgid "unknown error"
+msgstr "خطای ناشناخته"
+
+msgid "Enter a valid value."
+msgstr "یک مقدار معتبر وارد کنید"
+
+msgid "Enter a valid URL."
+msgstr "url معتبر وارد کنید"
+
+msgid "Enter a valid integer."
+msgstr "یک عدد معتبر وارد کنید"
+
+msgid "Enter a valid email address."
+msgstr "ایمیل معتبر نمی باشد"
+
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr "مقدار معتبر برای این فیلد بزرگتر یا مساوی با صفر است"
+
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "مقدار معتبر برای این فیلد بزرگتر یا مساوی با صفر است"
+
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "مقدار معتبر برای این فیلد بزرگتر یا مساوی با صفر است"
+
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "مقدار معتبر برای این فیلد بزرگتر یا مساوی با صفر است"
+
+msgid "Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] "مقدار معتبر برای این فیلد بزرگتر یا مساوی با صفر است"
+msgstr[1] "مقدار معتبر برای این فیلد بزرگتر یا مساوی با صفر است"
+
+msgid "Enter a number."
+msgstr "عدد وارد کنید."
+
+msgid "This field cannot be null."
+msgstr "این فیلد نمیتواند خالی باشد."
+
+msgid "This field cannot be blank."
+msgstr "این فیلد نمیتواند خالی باشد."
+
+
+msgid "No trading history found!"
+msgstr "تاریخچه معامله ای یافت نشد!"
+
+
+#: core/message_text.py:91
+#, python-format
+msgid "Take profit: (%s) is too high"
+msgstr "مقدار برداشت سود(%s) بالاتر از حد مجاز است"
+
+#: core/message_text.py:92
+#, python-format
+msgid "Stop loss: (%s) is too high"
+msgstr "مقدار توقف ضرر(%s) بالاتر از حد مجاز است"
+
+#: core/message_text.py:93
+#, python-format
+msgid "Stop loss (%s) for Buy position should be lower than (%s)"
+msgstr "مقدار توقف ضرر (%s) برای پوزیشن خرید باید کمتر از (%s) از باشد"
+
+#: core/message_text.py:94
+#, python-format
+msgid "Stop loss (%s) for Sell position should be greater (%s)"
+msgstr "مقدار توقف ضرر (%s) برای پوزیشن فروش باید بیشتر از (%s) باشد"
+
+#: core/message_text.py:95
+#, python-format
+msgid "Take profit (%s) for Buy position should be higher than (%s)"
+msgstr "مقدار برداشت سود (%s) برای پوزیشن خرید باید بیشتر از (%s) باشد"
+
+#: core/message_text.py:96
+#, python-format
+msgid "Take profit (%s) for Sell position should be lower than (%s)"
+msgstr "مقدار برداشت سود (%s) برای پوزیشن فروش باید کمتر از (%s) باشد"
+
+#: core/message_text.py:97
+#, python-format
+msgid "Stop loss: (%s) should be greater than 10 percent of entry point"
+msgstr "اختلاف توقف ضرر (%s) و قیمت ورود نباید بیش از 90 درصد باشد"
+
+#: core/message_text.py:98
+#, python-format
+msgid "Take profit: (%s) should be greater than 10 percent of entry point"
+msgstr "اختلاف برداشت سود (%s) و قیمت ورود نباید بیش از 90 درصد باشدباشد"
+
+#, python-format
+msgid "bybit does not have market symbol (%s)"
+msgstr "را ندارد (%s) صرافی بای بیت, کوین"
+
+
+msgid "bingx does not have market symbol (%s)"
+msgstr "را ندارد (%s) صرافی بینگ ایکس, کوین"
+
+msgid "TakeProfitPrice(%s) must be higher than entrustPrice(%s)"
+msgstr "مقدار برداشت سود(%s) باید بیشتر از قیمت ورودی(%s) باشد"
+
+msgid "TakeProfitPrice(%s) must be lower than entrustPrice(%s)"
+msgstr "مقدار برداشت سود(%s) باید کمتر از قیمت ورودی(%s) باشد"
+
+msgid "StopLossPrice(%s) price must lower than fair price(%s)"
+msgstr "مقدار توقف ضرر(%s) باید کمتر از قیمت ورودی(%s) باشد"
+
+
+msgid "StopLossPrice(%s) price must greater than fair price(%s)"
+msgstr "مقدار توقف ضرر(%s) باید بیشتر از قیمت ورودی(%s) باشد"
+
+
+msgid "Leverage is invalid"
+msgstr "مقدار اهرم غیر قابل قبول است"
+
+
+msgid "checkPriceLimit entrustPrice must greater than minPrice"
+msgstr "قیمت ورودی بسیار پایین تر از حد مجاز بازار است"
+
+
+msgid "checkPriceLimit entrustPrice must less than maxPrice"
+msgstr "قیمت ورودی بسیار بالا تر از حد مجاز بازار است"
+
+
+# signal/serializers/signal.py
+msgid "Either one of Percentage of fund or virtual value needs to be given"
+msgstr "حداقل و حداکثر یکی از مقادیر درصد سرمایه یا مقدار مجازی سیگنال باید وارد شود"
+
+
+msgid "order is already filled"
+msgstr "سفارش پر شده است"
+
+msgid "Order is not edible because it is closed or canceled."
+msgstr "این سفارش به دلیل لغو یا بسته شدن قابل ویرایش نیست."

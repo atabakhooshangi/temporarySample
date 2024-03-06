@@ -29,7 +29,7 @@ def create_coin(db):
 def create_service(db):
     service = Service.objects.create(
         title='signal',
-        link='http://exwino/test/service',
+        link='http://test/service',
         description='for testing',
         profile=create_profile(),
         coin=create_coin(),
@@ -41,7 +41,7 @@ def create_service(db):
 @pytest.fixture
 def create_exchange_market(db):
     exchange_market = ExchangeMarket.objects.create(
-        exchange_name='exwino',
+        exchange_name='test',
         coin_pair='usdt',
         coin_name='irr',
         base_currency='btc',
@@ -53,7 +53,7 @@ def create_exchange_market(db):
 @pytest.fixture
 def create_Signal(db):
     trading_signal = TradingSignal.objects.create(
-        sid=Service.objects.get(link='http://exwino/test/service'),
+        sid=Service.objects.get(link='http://test/test/service'),
         type="spot",
         market_id=Market.objects.get(primary_coin='irr', secoundary_coin='usdt'),
         exchange_market=create_exchange_market(),

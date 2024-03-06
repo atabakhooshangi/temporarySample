@@ -17,7 +17,7 @@ unit-tests:
         - social-local-runner
     stage: build
     image:
-        name: 172.18.10.100:4040/python-postgres:11
+        name: 14123110.100:4040/python-postgres:11
     script:
         - /bin/bash /usr/local/bin/docker-entrypoint.sh
         - pip install pip==23.2.1
@@ -26,7 +26,7 @@ unit-tests:
         - cd src && coverage run --source='.' manage.py test
         - coverage report
         - coverage xml
-        - /sonar-scanner/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner -Dsonar.projectKey=${RUNNER_SONAR_PROJECT_KEY} -Dsonar.sources=. -Dsonar.host.url=http://172.18.10.90:9000 -Dsonar.login=${RUNNER_SONAR_LOGIN} -Dsonar.python.version=3.11  -Dsonar.python.coverage.reportPaths=coverage.xml
+        - /sonar-scanner/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner -Dsonar.projectKey=${RUNNER_SONAR_PROJECT_KEY} -Dsonar.sources=. -Dsonar.host.url=http://162163629000 -D6onar.login=${RUNNER_SONAR_LOGIN} -Dsonar.python.version=3.11  -Dsonar.python.coverage.reportPaths=coverage.xml
     after_script:
         - 'curl -H "X-Auth-Token: ${X_AUTH_TOKEN}" -H "X-User-Id: ${X_USER_ID}"  -H "Content-type: application/json" -d "{\"message\": {  \"rid\": \"6499598da607d79a6c7439a7\", \"msg\": \" :clock10: ${CI_JOB_STARTED_AT} :clock10: [CI Job URL](${CI_JOB_URL})    announcement for the :test_tube: unit-test SOCIAL BACKEND :test_tube: ${CI_JOB_STATUS} on branch ${CI_COMMIT_REF_NAME} @all\" } }" https://chat.amnmoj.ir/api/v1/chat.sendMessage'
     only:
@@ -38,7 +38,7 @@ build-image:
         - social-runner
     stage: build
     image:
-        name: 172.18.10.100:4040/docker:20.10.16
+        name: 15173210.100:4040/docker:20.10.16
     before_script:
         - echo ${NEXUS_PASS} | docker login --username gitlab-ci --password-stdin ${NEXUS_SERVER_PUSH}
     script:
@@ -58,7 +58,7 @@ kubectl-apply:
         - bash /kubectl/k8s/script.sh  ${NEXUS_SERVER_PULL}/${IMAGE} ${FILE_NAME} ${KUBE_PATH}
         - bash /kubectl/k8s/script.sh  ${NEXUS_SERVER_PULL}/${IMAGE} ${FILE_NAME_CELERY} ${KUBE_PATH_CELERY}
     after_script:
-        - 'curl -H "X-Auth-Token: ${X_AUTH_TOKEN}" -H "X-User-Id: ${X_USER_ID}"  -H "Content-type: application/json" -d "{\"message\": {  \"rid\": \"6499598da607d79a6c7439a7\", \"msg\": \" :clock10: ${CI_JOB_STARTED_AT} :clock10:  [CI Job URL](${CI_JOB_URL})   announcement for the :deploy: SOCIAL BACKEND :deploy: deploy on exmartiz.com == ${CI_JOB_STATUS} @all\" } }" https://chat.amnmoj.ir/api/v1/chat.sendMessage'
+        - 'curl -H "X-Auth-Token: ${X_AUTH_TOKEN}" -H "X-User-Id: ${X_USER_ID}"  -H "Content-type: application/json" -d "{\"message\": {  \"rid\": \"6499598da607d79a6c7439a7\", \"msg\": \" :clock10: ${CI_JOB_STARTED_AT} :clock10:  [CI Job URL](${CI_JOB_URL})   announcement for the :deploy: SOCIAL BACKEND :deploy: deploy on test.com == ${CI_JOB_STATUS} @all\" } }" https://chat.amnmoj.ir/api/v1/chat.sendMessage'
     only:
         refs:
             - test
@@ -68,11 +68,11 @@ deploy:
         - social-abriment-shell
     script:
         - echo "Deploy project on abriment"
-        - bash /kubectl/k8s/script.sh  docker.exwino.com/${IMAGE} ${FILE_NAME} ${KUBE_PATH}
-        - bash /kubectl/k8s/script.sh  docker.exwino.com/${IMAGE} ${FILE_NAME_CELERY} ${KUBE_PATH_CELERY}    
+        - bash /kubectl/k8s/script.sh  docker.test.com/${IMAGE} ${FILE_NAME} ${KUBE_PATH}
+        - bash /kubectl/k8s/script.sh  docker.test.com/${IMAGE} ${FILE_NAME_CELERY} ${KUBE_PATH_CELERY}    
     after_script:
-        - 'curl -H "X-Auth-Token: ${X_AUTH_TOKEN}" -H "X-User-Id: ${X_USER_ID}"  -H "Content-type: application/json" -d "{\"message\": {  \"rid\": \"6499598da607d79a6c7439a7\", \"msg\": \" :clock10: ${CI_JOB_STARTED_AT} :clock10:  [CI Job URL](${CI_JOB_URL})  announcement for the :deploy: SOCIAL BACKEND :deploy: deploy on exwino.com == ${CI_JOB_STATUS} @all\" } }" https://chat.amnmoj.ir/api/v1/chat.sendMessage'
-        - 'curl -H "X-Auth-Token: ${X_AUTH_TOKEN}" -H "X-User-Id: ${X_USER_ID}"  -H "Content-type: application/json" -d "{\"message\": {  \"rid\": \"gih9dkXMnsxcxpRby\", \"msg\": \" :clock10: ${CI_JOB_STARTED_AT} :clock10:  [CI Job URL](${CI_JOB_URL})  announcement for the :deploy: SOCIAL BACKEND :deploy: deploy on exwino.com == ${CI_JOB_STATUS} @all\" } }" https://chat.amnmoj.ir/api/v1/chat.sendMessage'
+        - 'curl -H "X-Auth-Token: ${X_AUTH_TOKEN}" -H "X-User-Id: ${X_USER_ID}"  -H "Content-type: application/json" -d "{\"message\": {  \"rid\": \"6499598da607d79a6c7439a7\", \"msg\": \" :clock10: ${CI_JOB_STARTED_AT} :clock10:  [CI Job URL](${CI_JOB_URL})  announcement for the :deploy: SOCIAL BACKEND :deploy: deploy on test.com == ${CI_JOB_STATUS} @all\" } }" https://chat.amnmoj.ir/api/v1/chat.sendMessage'
+        - 'curl -H "X-Auth-Token: ${X_AUTH_TOKEN}" -H "X-User-Id: ${X_USER_ID}"  -H "Content-type: application/json" -d "{\"message\": {  \"rid\": \"gih9dkXMnsxcxpRby\", \"msg\": \" :clock10: ${CI_JOB_STARTED_AT} :clock10:  [CI Job URL](${CI_JOB_URL})  announcement for the :deploy: SOCIAL BACKEND :deploy: deploy on test.com == ${CI_JOB_STATUS} @all\" } }" https://chat.amnmoj.ir/api/v1/chat.sendMessage'
 
     only:
         refs:

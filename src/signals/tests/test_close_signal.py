@@ -23,7 +23,7 @@ class CloseSignalUnitTest(APITestCase):
         coin = 'USDT'
         service = Service.objects.create(
             title='signal',
-            link='http://exwino/test/service',
+            link='http://test/test/service',
             description='for testing',
             profile=profile,
             coin=coin,
@@ -31,7 +31,7 @@ class CloseSignalUnitTest(APITestCase):
         )
 
         exchange_market = ExchangeMarket.objects.create(
-            exchange_name='exwino',
+            exchange_name='test',
             coin_pair='BTCUSDT',
             coin_name='USDT/BTC',
             base_currency='SHIBA',

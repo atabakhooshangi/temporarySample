@@ -73,7 +73,7 @@ class SubscriptionTest(APITestCase):
         response = self.client.put(
             url,
             data={
-                "client_redirect_url": 'https://exmartiz.com/social/',
+                "client_redirect_url": 'https://test.com/social/',
                 "payment_type": SubscriptionPaymentTypeChoices.TRIAL
             },
             format='json',
@@ -98,7 +98,7 @@ class SubscriptionTest(APITestCase):
                 'service-subscribe',
                 kwargs={'pk': service_1.id}),
             data={
-                "client_redirect_url": 'https://exmartiz.com/social/',
+                "client_redirect_url": 'https://test.com/social/',
                 "payment_type": SubscriptionPaymentTypeChoices.TRIAL
             },
             format='json',
@@ -107,7 +107,7 @@ class SubscriptionTest(APITestCase):
         response = self.client.put(
             url,
             data={
-                "client_redirect_url": 'https://exmartiz.com/social/',
+                "client_redirect_url": 'https://test.com/social/',
                 "payment_type": SubscriptionPaymentTypeChoices.TRIAL
             },
             format='json',

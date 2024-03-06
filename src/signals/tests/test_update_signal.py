@@ -24,7 +24,7 @@ class UpdateSignalUnitTest(APITestCase):
 
         service = Service.objects.create(
             title='signal',
-            link='http://exwino/test/service',
+            link='http://test/test/service',
             description='for testing',
             profile=profile,
             coin='USDT',
@@ -35,14 +35,14 @@ class UpdateSignalUnitTest(APITestCase):
             bucket="test_bucket"
         )
         exchange_market = ExchangeMarket.objects.create(
-            exchange_name='exwino',
+            exchange_name='test',
             coin_pair='BTCUSDT',
             coin_name='USDT/BTC',
             base_currency='BTC',
             quote_currency='USDT',
         )
         TradingSignal.objects.create(
-            sid=Service.objects.get(link='http://exwino/test/service'),
+            sid=Service.objects.get(link='http://test/test/service'),
             type=TradingSignalType.SPOT,
             exchange_market=exchange_market,
             leverage=1000000,
@@ -55,7 +55,7 @@ class UpdateSignalUnitTest(APITestCase):
             virtual_value=100
         )
         TradingSignal.objects.create(
-            sid=Service.objects.get(link='http://exwino/test/service'),
+            sid=Service.objects.get(link='http://test/test/service'),
             state=StatusChoice.START,
             type=TradingSignalType.FUTURES,
             position=PositionChoice.LONG,
@@ -74,7 +74,7 @@ class UpdateSignalUnitTest(APITestCase):
             virtual_value=100
         )
         TradingSignal.objects.create(
-            sid=Service.objects.get(link='http://exwino/test/service'),
+            sid=Service.objects.get(link='http://test/test/service'),
             state=StatusChoice.START,
             type=TradingSignalType.FUTURES,
             position=PositionChoice.SHORT,

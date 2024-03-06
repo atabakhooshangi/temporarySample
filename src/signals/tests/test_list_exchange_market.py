@@ -20,7 +20,7 @@ class UpdateSignalUnitTest(APITestCase):
         )
         Service.objects.create(
             title='signal_1',
-            link='http://exwino/test/service_1',
+            link='http://test/test/service_1',
             description='for testing',
             profile=profile,
             coin=CoinChoices.USDT,
@@ -28,7 +28,7 @@ class UpdateSignalUnitTest(APITestCase):
         )
         Service.objects.create(
             title='signal_2',
-            link='http://exwino/test/service_2',
+            link='http://test/test/service_2',
             description='for testing',
             profile=profile,
             coin=CoinChoices.IRR,
@@ -39,14 +39,14 @@ class UpdateSignalUnitTest(APITestCase):
             bucket="test_bucket"
         )
         ExchangeMarket.objects.create(
-            exchange_name='exwino',
+            exchange_name='test',
             coin_pair='USDT/IRR',
             coin_name='USDT/IRR',
             base_currency='btc',
             quote_currency='usdt',
         )
         ExchangeMarket.objects.create(
-            exchange_name='exwino',
+            exchange_name='test',
             coin_pair='BTC/IRR',
             coin_name='BTC/IRR',
             base_currency='btc',

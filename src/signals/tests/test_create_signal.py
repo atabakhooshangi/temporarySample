@@ -23,14 +23,14 @@ class TradingSignalUnitTest(APITestCase):
         )
         service = Service.objects.create(
             title='signal',
-            link='http://exwino/test/service',
+            link='http://test/test/service',
             description='for testing',
             profile=profile,
             coin='USDT',
             subscription_fee=100,
         )
         ExchangeMarket.objects.create(
-            exchange_name='exwino',
+            exchange_name='test',
             coin_pair='BTCUSDT',
             coin_name='USDT/BTC',
             base_currency='BTC',
@@ -54,7 +54,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.SPOT,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "leverage": 1,
             "entry_point": 100,
             "percentage_of_fund": 3,
@@ -76,7 +76,7 @@ class TradingSignalUnitTest(APITestCase):
         data = {
 
             "type": TradingSignalType.SPOT,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "leverage": 3,
             "entry_point": 50,
             "percentage_of_fund": 1,
@@ -97,7 +97,7 @@ class TradingSignalUnitTest(APITestCase):
         data = {
 
             "type": TradingSignalType.FUTURES,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "leverage": 1,
             "entry_point": 50,
             "percentage_of_fund": 25,
@@ -120,7 +120,7 @@ class TradingSignalUnitTest(APITestCase):
         data = {
 
             "type": TradingSignalType.FUTURES,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "percentage_of_fund": 1,
             "position": PositionChoice.LONG,
             "entry_point": 1000000,
@@ -151,7 +151,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.FUTURES,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "percentage_of_fund": 1,
             "position": PositionChoice.SHORT,
             "entry_point": 1000000,
@@ -182,7 +182,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.FUTURES,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "percentage_of_fund": 1,
             "position": PositionChoice.LONG,
             "entry_point": 1000000,
@@ -212,7 +212,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.FUTURES,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "percentage_of_fund": 1,
             "position": PositionChoice.SHORT,
             "entry_point": 1000000,
@@ -243,7 +243,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.FUTURES,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "percentage_of_fund": 1,
             "position": PositionChoice.LONG,
             "entry_point": 1000000,
@@ -275,7 +275,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.SPOT,
-            "exchange_market_id": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market_id": ExchangeMarket.objects.get(exchange_name="test").id,
             "leverage": 1000000,
             "entry_point": 23000,
             "percentage_of_fund": 5,
@@ -297,7 +297,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.SPOT,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "leverage": 1000000,
             "entry_point": 100,
             "percentage_of_fund": 1,
@@ -320,7 +320,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.SPOT,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "leverage": -1000000,
             "entry_point": 50,
             "percentage_of_fund": 1,
@@ -354,7 +354,7 @@ class TradingSignalUnitTest(APITestCase):
         url = reverse('signal-list')
         data = {
             "type": TradingSignalType.SPOT,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "leverage": 10000,
             "entry_point": 50,
             "percentage_of_fund": 120,
@@ -391,7 +391,7 @@ class TradingSignalUnitTest(APITestCase):
         data = {
             "type": TradingSignalType.FUTURES,
             "position": PositionChoice.LONG,
-            "exchange_market": ExchangeMarket.objects.get(exchange_name="exwino").id,
+            "exchange_market": ExchangeMarket.objects.get(exchange_name="test").id,
             "leverage": 1000000,
             "entry_point": 50,
             "percentage_of_fund": 1,

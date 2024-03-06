@@ -102,14 +102,14 @@ EMAILS_ENABLED=True
 
 SOCIAL_DATA_REDIS_INDEX=7
 SET_SANDBOX_MODE=True
-CONFIG_SERVER_BASE_URL=https://api.exmartiz.com/consul/v1/kv/
+CONFIG_SERVER_BASE_URL=https://api.test.com/consul/v1/kv/
 CONSOLE_KEY=application/settings
 REFERRAL_DISCOUNT_TYPE='fixed_discount'
 REFERRAL_DISCOUNT_AMOUNT=2
 REFERRAL_DISCOUNT_EXPIRE_DAYS=14
-EXPAY_BASE_URL = "https://cp.exmartiz.com"
+EXPAY_BASE_URL = "https://cp.test.com"
 CRYPTO_GATEWAY_LOCK_OFFSET = 30
-EXPAY_MERCHANT_KEY = "exmartiz"
+EXPAY_MERCHANT_KEY = "test"
 EXPAY_PAYMENT_URL = "http://localhost:8000/social/panel/cryptoPayment/"
 ADDITIONAL_FEE_FOR_USDT_PRICE=5
 

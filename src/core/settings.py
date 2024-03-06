@@ -47,7 +47,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = env_to_boolean(os.environ["DEBUG"])
 # NOTE: Pass allowed host as comma seperated in env file
 ALLOWED_HOSTS = os.environ["ALLOWED_HOSTS"].split(",")
-CSRF_TRUSTED_ORIGINS = ['https://*.exmartiz.com', 'https://*.exwino.com', 'https://*.127.0.0.1',
+CSRF_TRUSTED_ORIGINS = ['https://*.test.com', 'https://*.test.com', 'https://*.127.0.0.1',
                         'http://*.192.168.100.116', "http://*.192.168.100.103"]
 
 # Application definition

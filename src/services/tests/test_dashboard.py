@@ -51,7 +51,7 @@ class SignalServiceDashboardUnitTest(APITestCase):
         service.created_at = datetime(2023, 1, 1)
         service.save()
         exchange_market = ExchangeMarket.objects.create(
-            exchange_name="exwino",
+            exchange_name="test",
             coin_pair='USDT/BTC',
             coin_name='BTC-USDT',
             base_currency='BTC',

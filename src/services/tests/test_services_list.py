@@ -105,7 +105,7 @@ class MyServiceListTest(APITestCase):
             subscription_coin='usdt'
         )
         exchange_market = ExchangeMarket.objects.create(
-            exchange_name="exwino",
+            exchange_name="test",
             coin_pair='usdt/irr',
             coin_name='coin.name',
             base_currency='btc',
@@ -179,7 +179,7 @@ class FollowServiceListTest(APITestCase):
             subscription_coin='usdt'
         )
         exchange_market = ExchangeMarket.objects.create(
-            exchange_name="exwino",
+            exchange_name="test",
             coin_pair='usdt/irr',
             coin_name='coin.name',
             base_currency='btc',

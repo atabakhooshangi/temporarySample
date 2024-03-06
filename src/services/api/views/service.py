@@ -335,7 +335,7 @@ class ServiceViewList(
                 )
             )
         elif subscription.payment_type == SubscriptionPaymentTypeChoices.CRYPTO_INTERNAL_PAID:
-            message = "paid with exwino wallet"
+            message = "paid with test wallet"
             data = dict()
 
         return Response(

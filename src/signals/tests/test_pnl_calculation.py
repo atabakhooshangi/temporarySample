@@ -22,7 +22,7 @@ class PnLCalculationUnitTest(TestCase):
         )
         service = Service.objects.create(
             title='signal',
-            link='http://exwino/test/service',
+            link='http://test/test/service',
             description='for testing',
             profile=profile,
             coin="USDT",
@@ -30,7 +30,7 @@ class PnLCalculationUnitTest(TestCase):
         )
 
         exchange_market = ExchangeMarket.objects.create(
-            exchange_name='exwino',
+            exchange_name='test',
             coin_pair='USDT',
             coin_name='USDT',
             base_currency='BTC',

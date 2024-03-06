@@ -65,7 +65,7 @@ class AccountingAPIClient:
             url=self.base_url + settings.ACCOUNTING_DECREASE_WALLET_BALANCE_ENDPOINT,
             data=data,
             headers={
-                "X-EXWINO-API": settings.ACCOUNTING_API_KEY,
+                "X-test-API": settings.ACCOUNTING_API_KEY,
                 "Content-Type": "application/json"
             }
         )
